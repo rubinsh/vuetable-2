@@ -2511,7 +2511,8 @@ exports.default = {
           ascendingIcon: 'blue chevron up icon',
           descendingIcon: 'blue chevron down icon',
           detailRowClass: 'vuetable-detail-row',
-          handleIcon: 'grey sidebar icon'
+          handleIcon: 'grey sidebar icon',
+          tableBodyClass: 'vuetable-semantic-no-top'
         };
       }
     },
@@ -3485,7 +3486,7 @@ exports = module.exports = __webpack_require__(42)(false);
 
 
 // module
-exports.push([module.i, "\n[v-cloak][data-v-5cc42bfc] {\n  display: none;\n}\n.vuetable th.sortable[data-v-5cc42bfc]:hover {\n  color: #2185d0;\n  cursor: pointer;\n}\n.vuetable-body-wrapper[data-v-5cc42bfc] {\n  position:relative;\n  overflow-y:auto;\n}\n.vuetable-actions[data-v-5cc42bfc] {\n  width: 15%;\n  padding: 12px 0px;\n  text-align: center;\n}\n.vuetable-pagination[data-v-5cc42bfc] {\n  background: #f9fafb !important;\n}\n.vuetable-pagination-info[data-v-5cc42bfc] {\n  margin-top: auto;\n  margin-bottom: auto;\n}\n.vuetable-empty-result[data-v-5cc42bfc] {\n  text-align: center;\n}\n.vuetable-clip-text[data-v-5cc42bfc] {\n  white-space: pre-wrap;\n  text-overflow: ellipsis;\n  overflow: hidden;\n  display: block;\n}\n", ""]);
+exports.push([module.i, "\n[v-cloak][data-v-5cc42bfc] {\n  display: none;\n}\n.vuetable th.sortable[data-v-5cc42bfc]:hover {\n  color: #2185d0;\n  cursor: pointer;\n}\n.vuetable-body-wrapper[data-v-5cc42bfc] {\n  position:relative;\n  overflow-y:auto;\n}\n.vuetable-actions[data-v-5cc42bfc] {\n  width: 15%;\n  padding: 12px 0px;\n  text-align: center;\n}\n.vuetable-pagination[data-v-5cc42bfc] {\n  background: #f9fafb !important;\n}\n.vuetable-pagination-info[data-v-5cc42bfc] {\n  margin-top: auto;\n  margin-bottom: auto;\n}\n.vuetable-empty-result[data-v-5cc42bfc] {\n  text-align: center;\n}\n.vuetable-clip-text[data-v-5cc42bfc] {\n  white-space: pre-wrap;\n  text-overflow: ellipsis;\n  overflow: hidden;\n  display: block;\n}\n.vuetable-semantic-no-top[data-v-5cc42bfc] {\n  border-top:none !important;\n  margin-top:0 !important;\n}\n", ""]);
 
 // exports
 
@@ -3884,7 +3885,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   return (_vm.isFixedHeader) ? _c('div', [_c('div', {
     staticClass: "vuetable-head-wrapper"
   }, [_c('table', {
-    class: ['vuetable', _vm.css.tableClass]
+    class: ['vuetable', _vm.css.tableClass, _vm.css.tableHeaderClass]
   }, [_c('thead', [_c('tr', [_vm._l((_vm.tableFields), function(field) {
     return [(field.visible) ? [(_vm.isSpecialField(field.name)) ? [(_vm.extractName(field.name) == '__checkbox') ? _c('th', {
       class: ['vuetable-th-checkbox-' + _vm.trackBy, field.titleClass],
@@ -3972,7 +3973,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       height: _vm.tableHeight
     })
   }, [_c('table', {
-    class: ['vuetable', _vm.css.tableClass]
+    class: ['vuetable', _vm.css.tableClass, _vm.css.tableBodyClass]
   }, [_c('colgroup', [_vm._l((_vm.tableFields), function(field) {
     return [(field.visible) ? [
       [_c('col', {

@@ -1,7 +1,7 @@
 <template>
 <div v-if="isFixedHeader">
   <div class="vuetable-head-wrapper">
-    <table :class="['vuetable', css.tableClass]">
+    <table :class="['vuetable', css.tableClass, css.tableHeaderClass]">
       <thead>
         <tr>
           <template v-for="field in tableFields">
@@ -49,7 +49,7 @@
     </table>
   </div>
   <div class="vuetable-body-wrapper" :style="{height: tableHeight}">
-    <table :class="['vuetable', css.tableClass]">
+    <table :class="['vuetable', css.tableClass, css.tableBodyClass]">
       <colgroup>
           <template v-for="field in tableFields">
             <template v-if="field.visible">
@@ -399,6 +399,7 @@ export default {
           descendingIcon: 'blue chevron down icon',
           detailRowClass: 'vuetable-detail-row',
           handleIcon: 'grey sidebar icon',
+          tableBodyClass: 'vuetable-semantic-no-top',
         }
       }
     },
@@ -1136,5 +1137,9 @@ export default {
     text-overflow: ellipsis;
     overflow: hidden;
     display: block;
+  }
+  .vuetable-semantic-no-top {
+    border-top:none !important;
+    margin-top:0 !important;
   }
 </style>
